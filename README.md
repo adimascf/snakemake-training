@@ -24,9 +24,9 @@ Before you begin, make sure you have the following tools installed:
 You will need the following files before running the pipeline:
 
 - **Three FASTQ files**  
-  [H3K4me3 replicate 1](ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR127/001/SRR1275461/SRR1275461.fastq.gz)
-  [H3K4me3 replicate 2](ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR127/002/SRR1275462/SRR1275462.fastq.gz)
-  [control DNA](ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR127/006/SRR1275466/SRR1275466.fastq.gz)
+  - H3K4me3 replicate 1: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR127/001/SRR1275461/SRR1275461.fastq.gz
+  - H3K4me3 replicate 2: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR127/002/SRR1275462/SRR1275462.fastq.gz
+  - control DNA: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR127/006/SRR1275466/SRR1275466.fastq.gz
 
 - **Genome reference**  
   [hg19](https://genome-idx.s3.amazonaws.com/bt/hg19.zip)
