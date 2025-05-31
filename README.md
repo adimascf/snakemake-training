@@ -6,7 +6,7 @@ Up until `download_refs` rule
    - Download the ZIP file from this repository.  
    - Unzip the file to your desired location.
 
-2. **Open the folder in VSCode (optional but recommended)**  
+2. **Open the folder in VSCode**  
    - Launch VSCode and open the unzipped folder.
 
 3. **Activate the Snakemake environment**  
