@@ -1,6 +1,6 @@
 ## 🔧 Setup Instructions
 
-Until `download_refs` rule
+Up until `download_refs` rule
 
 1. **Download and unzip the repository**  
    - Download the ZIP file from this repository.  
