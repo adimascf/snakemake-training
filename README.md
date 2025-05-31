@@ -1,6 +1,6 @@
 ## 🔧 Setup Instructions
 
-Until `read_mapping` rule
+Until `download_refs` rule
 
 1. **Download and unzip the repository**  
    - Download the ZIP file from this repository.  
@@ -16,5 +16,6 @@ Until `read_mapping` rule
    ```
 4. **Run Snakemake** 
    ```bash
-   snakemake --cores 4 --use-cond read_mapping
+   snakemake --cores 4 --use-cond download_refs
    ```
+⏱ Note: Downloading human reference genome (~3GB) may take approximately 1 hour to complete, depending on your system’s performance and available resources.

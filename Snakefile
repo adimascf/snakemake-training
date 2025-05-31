@@ -48,36 +48,3 @@ rule download_refs:
         wget -O data/genome/hg19.zip {params.url}
         unzip data/genome/hg19.zip -d data/genome/hg19
         """
-
-rule read_mapping:
-    input:
-        rep1 = "data/processed/fastp/h3k4me3_rep1.fastq.gz",
-        rep2 = "data/processed/fastp/h3k4me3_rep2.fastq.gz",
-        control = "data/processed/fastp/control.fastq.gz",
-        genome = "data/genome/hg19/"
-    threads: 4
-    log:
-        rep1 = "data/processed/mapped/h3k4me3_rep1.log",
-        rep2 = "data/processed/mapped/h3k4me3_rep2.log",
-        control = "data/processed/mapped/control.log"
-    conda:
-        "envs.yaml"
-    output:
-        rep1 = "data/processed/mapped/h3k4me3_rep1.bam",
-        rep2 = "data/processed/mapped/h3k4me3_rep2.bam",
-        control = "data/processed/mapped/control.bam"
-    shell:
-        """
-        mkdir -p data/processed/mapped
-        bowtie2 -p {threads} -x {input.genome}/hg19 -U {input.rep1} 2> {log.rep1}.log \
-            | samtools view -@ 2 -F 4 -q 1 -bS \
-            | samtools sort -@ 2 -o {output.rep1}
-
-        bowtie2 -p {threads} -x {input.genome}/hg19 -U {input.rep2} 2> {log.rep2}.log \
-            | samtools view -@ 2 -F 4 -q 1 -bS \
-            | samtools sort -@ 2 -o {output.rep2}
-
-        bowtie2 -p {threads} -x {input.genome}/hg19 -U {input.control} 2> {log.control}.log \
-            | samtools view -@ 2 -F 4 -q 1 -bS \
-            | samtools sort -@ 2 -o {output.control}
-        """
