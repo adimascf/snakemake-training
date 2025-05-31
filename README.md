@@ -1,42 +1,20 @@
-# Intro to Snakemake
+## 🔧 Setup Instructions
 
-## 🛠 Prerequisites
+Until `read_mapping` rule
 
-Before you begin, make sure you have the following tools installed:
+1. **Download and unzip the repository**  
+   - Download the ZIP file from this repository.  
+   - Unzip the file to your desired location.
 
-- **Visual Studio Code (VSCode)**  
-  Code editor for development and running scripts.  
-  👉 [Download VSCode](https://code.visualstudio.com/)
+2. **Open the folder in VSCode (optional but recommended)**  
+   - Launch VSCode and open the unzipped folder.
 
-- **Conda or Mamba**  
-  Package and environment manager to install required bioinformatics tools.  
-  👉 [Download Miniconda](https://docs.conda.io/en/latest/miniconda.html)  
-  👉 [Download Mamba (conda faster alternative)](https://mamba.readthedocs.io/en/latest/)
-
-- **WSL (Windows Subsystem for Linux) [Windows only]**  
-  Enables Linux tools and environments on Windows.  
-  👉 [Set up WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
-
----
-
-## 📂 Input files and tools
-
-- **Three FASTQ files**  
-  - H3K4me3 replicate 1: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR127/001/SRR1275461/SRR1275461.fastq.gz
-  - H3K4me3 replicate 2: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR127/002/SRR1275462/SRR1275462.fastq.gz
-  - control DNA: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR127/006/SRR1275466/SRR1275466.fastq.gz
-
-- **Genome reference**  
-  - [hg19](https://genome-idx.s3.amazonaws.com/bt/hg19.zip)
-
-- **Tools**
-  - Snakemake
-  - wget
-  - fastp
-  - bowtie2
-  - macs3
-  - bedtools2
-  - multiqc
-
----
-
+3. **Activate the Snakemake environment**  
+   Open your terminal and run:
+   ```bash
+   conda activate snakemake
+   ```
+4. **Run Snakemake** 
+   ```bash
+   snakemake --cores 4 --use-cond read_mapping
+   ```
