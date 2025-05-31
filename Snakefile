@@ -36,16 +36,17 @@ rule run_fastp:
         fastp --in1 {input.rep2} --out1 {output.rep2} --html {log.rep2}.html --json {log.rep2}.json
         fastp --in1 {input.control} --out1 {output.control} --html {log.control}.html --json {log.control}.json
         """
+
 rule download_refs:
     params:
         url = "https://genome-idx.s3.amazonaws.com/bt/hg19.zip"
     output:
-        hg19 = "data/genome/hg19/"
+        hg19 = "data/genome/hg19"
     shell:
         """
         mkdir -p data/genome/hg19
-        wget -O {output.hg19} {params.url}
-        unzip {output.hg19} -d data/genome/hg19
+        wget -O data/genome/hg19.zip {params.url}
+        unzip data/genome/hg19.zip -d data/genome/hg19
         """
 
 rule read_mapping:
