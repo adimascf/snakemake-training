@@ -5,8 +5,36 @@ channels:
   - https://repo.anaconda.com/pkgs/main
   - https://repo.anaconda.com/pkgs/r
 dependencies:
+  - bowtie2=2.5.4=he4764aa_5
+  - bzip2=1.0.8=hfdf4475_7
+  - c-ares=1.34.5=hf13058a_0
+  - ca-certificates=2025.4.26=hbd8a1cb_0
   - fastp=0.24.3=h9ea9c2a_0
+  - htslib=1.21=h9f635df_1
   - isa-l=2.31.1=h6e16a3a_1
+  - krb5=1.21.3=h37d8d59_0
+  - libcurl=8.14.0=h5dec5d8_0
   - libcxx=20.1.6=hf95d169_0
   - libdeflate=1.22=h00291cd_0
-prefix: /Users/adimascf/miniconda/envs/chipseq-env
+  - libedit=3.1.20250104=pl5321ha958ccf_0
+  - libev=4.33=h10d778d_2
+  - libexpat=2.7.0=h240833e_0
+  - libffi=3.4.6=h281671d_1
+  - liblzma=5.8.1=hd471939_1
+  - libmpdec=4.0.0=h6e16a3a_0
+  - libnghttp2=1.64.0=hc7306c3_0
+  - libsqlite=3.50.0=hdb6dae5_0
+  - libssh2=1.11.1=hed3591d_0
+  - libzlib=1.3.1=hd23fc13_2
+  - llvm-openmp=20.1.6=ha54dae1_0
+  - ncurses=6.5=h0622a9a_3
+  - openssl=3.5.0=hc426f3f_1
+  - perl=5.32.1=7_h10d778d_perl5
+  - pip=25.1.1=pyh145f28c_0
+  - python=3.13.3=h534c281_101_cp313
+  - python_abi=3.13=7_cp313
+  - readline=8.2=h7cca4af_2
+  - samtools=1.21=ha21ef43_1
+  - tk=8.6.13=hf689a15_2
+  - tzdata=2025b=h78e105d_0
+  - zstd=1.5.7=h8210216_2
