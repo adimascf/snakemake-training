@@ -1,6 +1,7 @@
 rule all:
     input:
         "data/processed/peak_calling/h3k4me3.peak.bw"
+        "data/processed/peak_calling/h3k4me3.idr.final.bed"
 
 rule download_fastq:
     params:
