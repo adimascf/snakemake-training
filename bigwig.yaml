@@ -1,0 +1,11 @@
+name: bigwig
+channels:
+  - conda-forge
+  - bioconda
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
+dependencies:
+  - libzlib=1.2.13=h87427d6_6
+  - ucsc-bedgraphtobigwig=366=h1341992_0
+  - zlib=1.2.13=h87427d6_6
+prefix: /Users/adimascf/miniconda/envs/bigwig
