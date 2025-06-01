@@ -41,7 +41,7 @@ rule download_refs:
     params:
         url = "https://genome-idx.s3.amazonaws.com/bt/hg19.zip"
     output:
-        hg19 = "data/genome/hg19"
+        directory("data/genome/hg19")
     shell:
         """
         mkdir -p data/genome/hg19
